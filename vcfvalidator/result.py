@@ -147,17 +147,12 @@ class Result:
             if len(self._check_sample_id_consistency_result['sample_ids_in_metadata_but_not_in_body']) > 0:
                 logfile.write('\n\nThe following sample IDs have been found in the metadata but not in the VCF body:\n\n')
                 _formatted = ['Line '+str(item[1])+': '+str(item[0]) for item in self._check_sample_id_consistency_result['sample_ids_in_metadata_but_not_in_body']]
-                #_joined = ', '.join([str(_id) for _id in self._check_sample_id_consistency_result['sample_ids_in_metadata_but_not_in_body']])
-                #_joined = '\n'.join(_formatted)
-                #_lines = textwrap.wrap(_joined, 150)
                 logfile.write('\n'.join(_formatted))
 
 
             if len(self._check_sample_id_consistency_result['sample_ids_in_body_but_not_in_metadata']) > 0:
                 logfile.write('\n\n\nThe following sample IDs have been found in the VCF body but not in the metadata:\n\n')
                 _formatted = ['Column '+str(item[1])+': '+str(item[0]) for item in self._check_sample_id_consistency_result['sample_ids_in_body_but_not_in_metadata']]
-                #_joined = ', '.join([str(_id) for _id in self._check_sample_id_consistency_result['sample_ids_in_body_but_not_in_metadata']])
-                #_lines = textwrap.wrap(_joined, 150)
                 logfile.write('\n'.join(_formatted))
 
 
