@@ -1,4 +1,4 @@
-# vcfvalidator
+# fairvcf
 
 This package checks the metadata of VCF files with respect to the following paper: https://f1000research.com/articles/11-231
 
@@ -6,14 +6,12 @@ This package checks the metadata of VCF files with respect to the following pape
 ### Installing the package:
 
 ```
-pip install vcfvalidator
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ fairvcf
 ```
 
 ### How to use the validator:
 
 The package installs a CLI tool that can be used to check the VCF metdata with the following command:
 ```
-$ vcfvalidator validate-metadata PATH_TO_VCF_FILE
+$ fairvcf validate-metadata PATH_TO_VCF_FILE
 ```
-
-The VCF file under PATH_TO_VCF_FILE can be either compressed with GZIP (*.vcf.gz) or uncompressed (*.vcf).
